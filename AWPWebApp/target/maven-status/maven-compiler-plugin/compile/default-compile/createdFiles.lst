@@ -1,0 +1,7 @@
+com\awp\model\Account.class
+com\awp\service\AppConfig.class
+com\awp\rest\AWPRestService.class
+com\awp\model\Booking.class
+com\awp\model\Room.class
+com\awp\service\HotelAdministration.class
+com\awp\jdbc\PostgresJDBC.class
