@@ -12,6 +12,7 @@
 <script src="resources/angular.js"></script>
 <script src="resources/angular-resource.min.js"></script>
 <script src="resources/angular-route.min.js"></script>
+<script src="resources/carousel.js"></script>
 
 <script src="app.js"></script>
 <script src="controllers/MainCtrl.js"></script>
@@ -27,8 +28,12 @@
 
 <body ng-app="myApp">
 	<div ng-controller="MainCtrl" id="appContainer">
-		<navbar></navbar>
-		<div ng-view></div>
+		<div class="col-sm-2"></div>
+		<div class="col-sm-8">
+			<navbar></navbar>
+			<div ng-view></div>
+		</div>
+		<div class="col-sm-2"></div>
 	</div>
 </body>
 </html>
