@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AWP App</title>
+
+<link rel="stylesheet" href="resources/bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+<script src="resources/jquery.js"></script>
+<script src="resources/bootstrap.min.js"></script>
+<script src="resources/angular.js"></script>
+<script src="resources/angular-resource.min.js"></script>
+<script src="resources/angular-route.min.js"></script>
+
+<script src="app.js"></script>
+<script src="controllers/MainCtrl.js"></script>
+<script src="controllers/HomeCtrl.js"></script>
+<script src="controllers/GalleryCtrl.js"></script>
+<script src="controllers/ServicesCtrl.js"></script>
+<script src="controllers/ReservationCtrl.js"></script>
+<script src="controllers/ContactCtrl.js"></script>
+<script src="directives/navbar.js"></script>
+</head>
+
+<body ng-app="myApp">
+	<div ng-controller="MainCtrl" id="appContainer">
+		<navbar></navbar>
+		<div ng-view></div>
+	</div>
+</body>
+</html>
