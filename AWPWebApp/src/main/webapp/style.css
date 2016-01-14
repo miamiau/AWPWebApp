@@ -54,3 +54,7 @@ h1, .col-sm-12.well {
 	width: 500px;
 	height: 400px;
 }
+
+a, a:focus, a:hover {
+	outline: 0;
+}

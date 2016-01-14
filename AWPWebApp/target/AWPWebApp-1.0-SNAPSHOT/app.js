@@ -22,6 +22,14 @@ angular
 		  templateUrl: 'templates/contact.html',
 		  controller: 'ContactCtrl'
 	  })
+	  .when('/login', {
+		  templateUrl: 'templates/login.html',
+		  controller: 'LoginCtrl'
+	  })
+	  .when('/signup', {
+		  templateUrl: 'templates/signup.html',
+		  controller: 'SignupCtrl'
+	  })
       .otherwise({
           redirectTo: '/'
         });
