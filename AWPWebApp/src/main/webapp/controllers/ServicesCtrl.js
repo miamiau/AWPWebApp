@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('myApp').controller('ServicesCtrl', ['$scope', function ($scope) {
+angular.module('myApp').controller('ServicesCtrl', ['$scope', '$rootScope', 'AuthenticationService', function ($scope, $rootScope, AuthenticationService) {
 	
-    $scope.message = "Welcome to services page!";
+	$rootScope.isLoggedIn = AuthenticationService.isLogged;
     
  }]);

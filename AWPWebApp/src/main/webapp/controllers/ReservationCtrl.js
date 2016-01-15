@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('myApp').controller('ReservationCtrl', ['$scope', function ($scope) {
+angular.module('myApp').controller('ReservationCtrl', ['$scope', '$rootScope', 'AuthenticationService', function ($scope, $rootScope, AuthenticationService) {
 	
-    $scope.message = "Welcome to reservation page!";
+	$rootScope.isLoggedIn = AuthenticationService.isLogged;
     
  }]);

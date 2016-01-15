@@ -2,7 +2,7 @@ package com.awp.model;
 
 public class Account {
 
-    private int id;
+    private long id;
     private String email;
     private String password;
     private String cardNb;
@@ -12,7 +12,7 @@ public class Account {
     private String phoneNb;
     private String city;
     private String country;
-    private boolean isAdmin;
+    private boolean isAdmin = false;
 
     public String getEmail() {
         return email;
@@ -94,11 +94,11 @@ public class Account {
         this.isAdmin = isAdmin;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 }

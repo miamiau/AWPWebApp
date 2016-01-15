@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('myApp').controller('GalleryCtrl', ['$scope', function ($scope) {
+angular.module('myApp').controller('GalleryCtrl', ['$scope', '$rootScope', 'AuthenticationService', function ($scope, $rootScope, AuthenticationService) {
 	
-    $scope.message = "Welcome to gallery page!";
+	$rootScope.isLoggedIn = AuthenticationService.isLogged;
     
  }]);

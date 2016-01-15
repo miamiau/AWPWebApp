@@ -1,7 +1,11 @@
 'use strict';
 
-angular.module('myApp').controller('HomeCtrl', ['$scope', function ($scope) {
+angular.module('myApp').controller('HomeCtrl', ['$scope', '$rootScope', 'AuthenticationService', function ($scope, $rootScope, AuthenticationService) {
 	
-    $scope.message = "Welcome to home page!";
+	console.log("Loading home controller");
+	
+	$rootScope.isLoggedIn = AuthenticationService.isLogged;
+	
+	console.log("User is logged in: ", $scope.isLoggedIn);
     
  }]);

@@ -174,7 +174,7 @@ public class AWPPostgresJDBC {
 			dbConnection = getDBconnection();
 			preparedStatement = dbConnection.prepareStatement(insertTableSQL);
 
-			preparedStatement.setInt(1, account.getId());
+			preparedStatement.setLong(1, account.getId());
 			preparedStatement.setString(2, account.getEmail());
 			preparedStatement.setString(3, account.getPassword());
 			preparedStatement.setString(4, account.getCardNb());

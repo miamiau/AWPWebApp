@@ -1,7 +1,13 @@
 'use strict';
 
-angular.module('myApp').controller('MainCtrl', ['$scope', function ($scope) {
+angular.module('myApp').controller('MainCtrl', ['$scope', '$rootScope', 'AuthenticationService', function ($scope, $rootScope, AuthenticationService) {
 	
-    $scope.message = "Welcome to main page!";
+	$rootScope.isLoggedIn = AuthenticationService.isLogged;
+	
+	$rootScope.logOut = function() {
+		AuthenticationService.isLogged = false;
+    	AuthenticationService.username = '';
+		$rootScope.isLoggedIn = false;
+	}
     
  }]);

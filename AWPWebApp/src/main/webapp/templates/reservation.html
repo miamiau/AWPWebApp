@@ -1,41 +1,53 @@
 <div class="container">
-	<h1 class="well">Reservation Form</h1>
-	<div class="col-sm-12 well">
-		<div class="row">
-			<form>
-				<div class="col-sm-12">
+	<div ng-show="!isLoggedIn" class="alert alert-danger col-xs-10"
+		role="alert">You must be logged in before making a reservation!</div>
+	<br>
+	<div></div>
+	<br>
+	<div ng-hide="!isLoggedIn">
+		<h1 class="well">Reservation Form</h1>
+		<div class="col-sm-12 well">
+			<div class="row">
+				<form>
+					<div class="col-sm-12">
 
-					<div class="row">
-						<div class="col-sm-4 form-group">
-							<label>Rooms</label> <input type="number" min="1" max="100"
-								step="1" value="2" name="guests" class="form-control">
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="col-sm-6 form-group">
-							<label>Check in Date</label>
-							<div class="input-group date" data-provide="datepicker">
-								<input type="text" class="form-control">
-								<div class="input-group-addon">
-									<span class="glyphicon glyphicon-th"></span>
-								</div>
+						<div class="row">
+							<div class="col-sm-4 form-group">
+								<label>Rooms</label> <input type="number" min="1" max="100"
+									step="1" value="2" name="guests" class="form-control">
 							</div>
 						</div>
-						<div class="col-sm-6 form-group">
-							<label>Check out Date</label>
-							<div class="input-group date" data-provide="datepicker">
-								<input type="text" class="form-control">
-								<div class="input-group-addon">
-									<span class="glyphicon glyphicon-th"></span>
-								</div>
+
+						<div class="row">
+							<div class="col-sm-6 form-group">
+								<label>Check in Date</label>
+								<p class="input-group">
+									<input type="text" class="form-control">
+									<button type="button" class="btn btn-default"
+										ng-click="open1()">
+										<i class="glyphicon glyphicon-calendar"></i>
+									</button>
+									</span>
+								</p>
+							</div>
+							<div class="col-sm-6 form-group">
+								<label>Check out Date</label>
+								<p class="input-group">
+									<input type="text" class="form-control">
+										<button type="button" class="btn btn-default"
+											ng-click="open1()">
+											<i class="glyphicon glyphicon-calendar"></i>
+										</button>
+									</span>
+								</p>
 							</div>
 						</div>
-					</div>
 
-					<button type="button" class="btn btn-lg btn-info">Submit</button>
-				</div>
-			</form>
+						<button type="button" class="btn btn-lg btn-info">Submit</button>
+					</div>
+				</form>
+			</div>
 		</div>
 	</div>
+
 </div>
