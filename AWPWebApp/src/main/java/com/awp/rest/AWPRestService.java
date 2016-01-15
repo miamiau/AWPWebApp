@@ -1,7 +1,6 @@
 package com.awp.rest;
 
 import java.sql.SQLException;
-import java.util.logging.Logger;
 
 import javax.ejb.EJB;
 import javax.ejb.Singleton;
